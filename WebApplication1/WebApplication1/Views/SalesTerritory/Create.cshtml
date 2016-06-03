@@ -1,0 +1,70 @@
+﻿@model WebApplication1.Models.SalesTerritory
+
+@{
+    ViewBag.Title = "Create New Sales Territory";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>SalesTerritory</h4>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalesTerritoryAlternateKey, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+           <!-- Html.DropDownList("SalesTerritoryAlternateKey", new List<SelectListItem>{
+               new SelectListItem {Text ="0", Value ="0"},
+                new SelectListItem {Text ="1", Value ="1"},
+                 new SelectListItem {Text ="2", Value ="2"},
+                  new SelectListItem {Text ="3", Value ="3"},
+                   new SelectListItem {Text ="4", Value ="4"},
+                    new SelectListItem {Text ="5", Value ="5"},
+                     new SelectListItem {Text ="6", Value ="6"},
+                      new SelectListItem {Text ="7", Value ="7"},
+                       new SelectListItem {Text ="8", Value ="8"},
+                        new SelectListItem {Text ="9", Value ="9"},
+                         new SelectListItem {Text ="10", Value ="10"},
+           }, "Select") --> 
+
+                @Html.EditorFor(model => model.SalesTerritoryAlternateKey, new { htmlAttributes = new { @class = "form-control" } })
+               @Html.ValidationMessageFor(model => model.SalesTerritoryAlternateKey, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalesTerritoryRegion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SalesTerritoryRegion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SalesTerritoryRegion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalesTerritoryCountry, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SalesTerritoryCountry, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SalesTerritoryCountry, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalesTerritoryGroup, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SalesTerritoryGroup, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SalesTerritoryGroup, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

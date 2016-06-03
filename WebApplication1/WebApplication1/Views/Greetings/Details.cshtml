@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@using (Html.BeginForm())
+{ 
+    <label>Name:</label>
+@Html.TextBox("Name")
+    <br />
+    <label>Company Name: </label>
+@Html.TextBox("CompanyName")
+    <br />
+    <br />
+     
+<input type="Submit" value="Submit"/>
+
+}
+
